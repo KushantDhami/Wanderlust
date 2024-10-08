@@ -1,0 +1,46 @@
+<body>
+    <% layout("./layouts/boilerplate.ejs") -%>
+    <div class="row">
+        <div class="col-8 offset-2"> 
+            <h1 class="my-3">New List</h1>
+            <form action="/listings" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <lable class="form-lable" for="title">Title</lable>
+                    <input class="form-control" placeholder="Enter Title" name="listing[title]" required />
+                    <div class="invalid-feedback">Enter Valid Title</div>
+                </div>
+                <div class="mb-3">
+                    <lable class="form-lable" for="description">description</lable>
+                    <textarea rows="3" placeholder="Enter description" name="listing[description]" class="form-control" required></textarea>
+                    <div class="invalid-feedback">Enter Valid description</div>
+                </div>
+       
+
+        <div class="mb-3">
+            <lable class="form-lable" for="image">Upload Image</lable>
+            <input type="file" class="form-control" name="listing[image]" required/>
+            <div class="invalid-feedback">Enter Valid Image Path</div>
+        </div>
+
+    <div class="row">
+        <div class="mb-3 col-md-4">
+            <lable class="form-lable" for="price">Price</lable>
+            <input placeholder="Enter price" name="listing[price]"  class="form-control"required />
+            <div class="invalid-feedback">Enter Valid Price</div>
+        </div>
+        <div class="mb-3 col-md-8">
+            <lable class="form-lable" for="country">country</lable>
+            <input placeholder="India" type="text" name="listing[country]" class="form-control"required />
+            <div class="invalid-feedback">Enter Valid country</div>
+        </div>
+    </div>
+        <div class="mb-3">
+            <lable class="form-lable" for="location">Location</lable>
+            <input placeholder="Jaiput,rajasthan" type="text" name="listing[location]" class="form-control"required />
+            <div class="invalid-feedback">Enter Valid Location</div>
+        </div>
+        <button class="btn btn-dark add-btn my-3">add</button>
+    </form>
+</div>
+</div>
+</body>

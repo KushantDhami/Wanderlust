@@ -1,0 +1,26 @@
+<body>
+    <% layout("./layouts/boilerplate.ejs") -%>
+    <div class="row">
+        <div class="col-8 offset-2"> 
+            <h1 class="my-3">New User <%= name %></h1>
+            <form action="/singup" method="POST" novalidate class="needs-validation">
+                <div class="mb-3">
+                    <lable class="form-lable" for="username">username</lable>
+                    <input class="form-control" placeholder="Enter username" name="username" id="username" required />
+                    <div class="invalid-feedback">Enter Valid username</div>
+                </div>
+            <div class="mb-3">
+                <lable class="form-lable" for="email">email</lable>
+                <input  placeholder="Enter email" name="email" id="email" class="form-control" required/>
+                <div class="invalid-feedback">Enter Valid email</div>
+            </div>
+            <div class="mb-3">
+                <lable class="form-lable" for="password">password</lable>
+                <input  placeholder="Enter password" id="password" name="password" class="form-control" required/>
+                <div class="invalid-feedback">Enter Valid password</div>
+            </div>
+            <button class="btn btn-dark add-btn my-3">singup</button>
+        </form>
+    </div>
+</div>
+</body>
